@@ -11,6 +11,8 @@
         "laravel/framework": "^8.65",
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
+        "spatie/fractalistic": "^2.9",
+        "spatie/laravel-fractal": "^5.8",
         "tymon/jwt-auth": "^1.0"
     },
     "require-dev": {

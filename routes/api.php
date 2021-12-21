@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\v1\AuthController;
+use App\Http\Controllers\Api\v1\PostController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -29,5 +30,9 @@ Route::group([
     Route::post('/register', [AuthController::class, 'register']);
     Route::post('/logout', [AuthController::class, 'logout']);
     Route::post('/refresh', [AuthController::class, 'refresh']);
-    Route::get('/user-profile', [AuthController::class, 'userProfile']);    
+    Route::get('/user-profile', [AuthController::class, 'userProfile']);  
+    Route::get('/post',[PostController::class,'index']);  
+    Route::post('/post',[PostController::class,'store']);  
+    Route::post('/post-update/{id}',[PostController::class,'update']);  
+    Route::delete('/post-delete/{id}',[PostController::class,'destroy']);  
 });
